@@ -29,9 +29,12 @@ const BestSellingCard = ({car}) => {
             </figure>
             <div className="card-body   bg-white   hover:bg-gray-50 ">
               
-                <div className="card-actions flex flex-col justify-start items-center">
+                <div className="card-actions  flex flex-col justify-start items-center">
                 <p>Price :{price}</p>
+                    <div className="flex justify-between items-center gap-4">
                     <Link ><button className="px-6 py-1 bg-[#A0CeD4] rounded-full font-semibold ">Buy</button></Link>
+                    <Link ><button className="px-6 py-1 bg-[#A0CeD4] rounded-full font-semibold ">Add To Card</button></Link>
+                    </div>
                 </div>
             </div>
         </div>
