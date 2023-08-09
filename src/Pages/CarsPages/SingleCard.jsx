@@ -16,21 +16,28 @@ const SingleCard = ({cars}) => {
               })
         }
     }
+    console.log(cars);
     const {make,img,price,rating,_id} = cars
     return (
-        <div className="card w-80 bg-base-100 shadow-xl " data-aos="fade-up">
-            <figure className="px-10 pt-10 h-[300px]">
-                <img src={img} alt="Shoes" className="rounded-xl" />
-            </figure>
-            <div className="card-body items-center text-start ">
-                <h2 className="card-title ">{make}</h2>
-                <p>Price :{price}</p>
+        
+        <div className="card w-80 bg-[#A0CeD4]  rounded-lg shadow-md" data-aos="fade-up">
+              <div className="flex flex-col justify-center items-center h-20 shadow-sm">
+              <h2 className="card-title ">{make}</h2>
                 <p>Ratings : {rating}</p>
-                <div className="card-actions">
-                    <Link to={`/viewDetilsforHom/${_id}`}><button className="btn bg-[#394867]" onClick={handelMessage}>View Detils</button></Link>
+              </div>
+            <figure className=" h-[300px]">
+                <img src={img} alt="Shoes" className="" />
+            </figure>
+            <div className="card-body justify-start items-start rounded-b-lg text-start bg-white  shadow-sm hover:bg-red-300 ">
+              
+                <div className="card-actions flex flex-col justify-start items-center">
+                <p>Price :{price}</p>
+                    <Link to={`/viewDetilsforHom/${_id}`}><button className="" onClick={handelMessage}>View Detils</button></Link>
                 </div>
             </div>
         </div>
+
+        
     );
 };
 

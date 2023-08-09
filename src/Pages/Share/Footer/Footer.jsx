@@ -1,20 +1,24 @@
-import logo from '../../../assets/carLogo.png'
+import logo from '../../../assets/unicon.png'
+import Wave2 from '../Wave/Wave2';
 
 
 const Footer = () => {
   return (
-    <div>
-      <footer className="footer p-10 bg-[#212A3E] text-white mx-auto py-14">
+    <div className='relative'>
+     
+      <footer className="footer p-10 bg-[#A0CeD4]  mx-auto py-14">
 
        <div>
        <div className='grid md:grid-cols-4 sm:grid-cols-1 gap-8 justify-center items-center mx-auto md:p-8 ms:p-0 '>
        <div>
-          <img width="150" height="150" src={logo} alt="" />
+       <div className='flex  items-center justify-start w-full'>
+              <span>Toy-cars Hub</span> <img src={logo} alt="" height='65' width='65' className='' />
+            </div>
           <p>Toy-cars Hub<br />Providing reliable Toy-Cars since 2016</p>
         </div>
 
         <div className='flex flex-col '>
-          <span className="footer-title">CUSTOMER SERVICE</span>
+          <span className="footer-title text-base">CUSTOMER SERVICE</span>
           <a className="link link-hover">Payment Methods</a>
           <a className="link link-hover">Support Center</a>
           <a className="link link-hover">Cancellation, Return & Refund</a> 
@@ -27,7 +31,7 @@ const Footer = () => {
         </div>
 
         <div>
-        <span className=" footer-title">About Us </span>
+        <span className=" footer-title text-black">About Us </span>
          <p className='link link-hover'> Welcome to Toy-Cars-Hub, a leading destination for all things fun and imaginative! Since 2016, we have been delighting children and families in the heart of Barisal with our wide selection of toys, games, and playtime essentials.</p>
         </div>
 
@@ -40,6 +44,9 @@ const Footer = () => {
        
        </div>
       </footer>
+      <div className='z-10 absolute bottom-0'>
+      <Wave2 />
+      </div>
     </div>
   );
 };

@@ -12,8 +12,7 @@ const Login = () => {
         const navigate = useNavigate()
         const from = useLocation()
         useTitlt('Login Page')
-        console.log(from.state?.from);
-        console.log(from);
+        
     const handelLogin = (e) =>{
         e.preventDefault()
         const form = e.target

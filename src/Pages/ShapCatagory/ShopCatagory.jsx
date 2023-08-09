@@ -6,7 +6,7 @@ import PrivateCar from '../CarsPages/Cars/PrivateCar';
 
 const ShopCatagory = () => {
     return (
-        <div className='bg-[#F1F6F9]'>
+        <div className=''>
             <Tabs>
     <div className='mx-auto flex justify-center items-center'>
     <TabList>

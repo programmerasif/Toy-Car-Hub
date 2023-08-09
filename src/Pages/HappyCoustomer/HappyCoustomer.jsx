@@ -6,9 +6,9 @@ import img4 from '../../assets/personFour.jpg'
 const HappyCoustomer = () => {
     return (
         <div className="px-14 mb-10">
-            <h5 className="text-center mb-10">
+        <h5 className="text-center mb-10">
                 <span>---------------------------------</span>
-                <h5 className="text-center text-4xl font-bold">Happy Coustomer</h5>
+                <div className="text-center text-4xl font-bold">Happy Coustomer</div>
                 <span>---------------------------------</span>
             </h5>
             <div className="grid grid-cols-1 md:grid-cols-4 mx-auto gap-8">

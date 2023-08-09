@@ -5,13 +5,14 @@ import img3 from '../../assets/download.png'
 import img4 from '../../assets/quantam.png'
 import img5 from '../../assets/pran.jpg'
 import img6 from '../../assets/anor.jpg'
+import Wave from "../Share/Wave/Wave";
 
 const Supporting = () => {
     return (
         <div className="mb-32">
             <h5 className="text-center mb-10">
                 <span>-------------------------</span>
-                <h5 className="text-center text-4xl font-bold">Our Sponser</h5>
+                <div className="text-center text-4xl font-bold">Our Sponser</div>
                 <span>-------------------------</span>
             </h5>
             <Marquee>
@@ -23,6 +24,7 @@ const Supporting = () => {
                 <img src={img6} alt="" className="w-72 h-44 "/>
                 
             </Marquee>
+            <Wave />
         </div>
     );
 };

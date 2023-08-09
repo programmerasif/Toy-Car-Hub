@@ -4,11 +4,12 @@ import { AuthContext } from '../../../Provider/AuthProvider';
 import { NavLink } from "react-router-dom";
 import Swal from 'sweetalert2';
 import { FaUser } from "react-icons/fa";
+import Wave from '../Wave/Wave';
 const Navebr = () => {
   const { user, logOut } = useContext(AuthContext)
   const [tool, setTool] = useState(false);
   // const [isTrue ,setTrue] = useState(false)
-  console.log(user);
+
   const handelLogOut = () => {
     logOut()
       .then(() => {
@@ -34,9 +35,9 @@ const Navebr = () => {
   
 
   return (
-    <div className="bg-blue-500 relative">
-      
-      <div className="navbar bg-[#394867c3] text-white">
+    <div className="bg-[#EDD8BA] relative ">
+      <Wave />
+      <div className="navbar bg-[#EDD8BA] text-[#333333] font-semibold text-xl opacity-90">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -44,14 +45,14 @@ const Navebr = () => {
             </label>
             <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-5 shadow bg-gray-700 rounded-box w-52">
               <div className='flex gap-3 items-end justify-center w-full'>
-                Toy-cars Hub <img src={logo} alt="" height='30' width='30' className='rounded-full ring-offset-2 ring-2 ' />
+                Toy-cars Hub <img src={logo} alt="" height='30' width='30' className=' ' />
               </div>
               <li><NavLink to='/'>Home</NavLink> </li>
               <li><NavLink to='/alltoy'>All Toys</NavLink> </li>
               <li><NavLink to='/myToys'>My Toys</NavLink> </li>
 
               <li><NavLink to='/addedToy'>Added Toys</NavLink> </li>
-              <li><a>Blogs</a></li>
+              <li>Blogs</li>
               {
                 !user?.uid ? <> <NavLink to='/login'><li><span>LOG IN</span></li></NavLink>
                   <NavLink to='/register'><li><span>REGISTER</span></li></NavLink></> : <> <NavLink ><li onClick={handelLogOut}><span>Log out</span></li></NavLink></>
@@ -61,8 +62,8 @@ const Navebr = () => {
             </ul>
           </div>
           <a className=" md:text-2xl sm:text-sm ">
-            <div className='flex gap-3 items-end justify-center w-full'>
-              Toy-cars Hub <img src={logo} alt="" height='45' width='45' className='rounded-full ring-offset-2 ring-2 ' />
+            <div className='flex  items-center justify-center w-full'>
+              <span>Toy-cars Hub</span> <img src={logo} alt="" height='65' width='65' className='' />
             </div>
           </a>
         </div>
@@ -73,7 +74,7 @@ const Navebr = () => {
             <li><NavLink to='/alltoy' className={({ isActive,  }) =>isActive ? "text-black" : "" }>All Toys</NavLink> </li>
             <li>{user && <NavLink to='/myToys' className={({ isActive,  }) =>isActive ? "text-black" : "" }>My Toys</NavLink>} </li>
             <li>{user && <NavLink to='/addedToy' className={({ isActive,  }) =>isActive ? "text-black" : "" }>Added Toys</NavLink>}</li>
-            <li><NavLink to='/blog'className={({ isActive,  }) =>isActive ? "text-black" : "" } ><a>Blogs</a></NavLink></li>
+            <li><NavLink to='/blog'className={({ isActive,  }) =>isActive ? "text-black" : "" } >Blogs</NavLink></li>
             <li>
               {
                 !user ? <> <NavLink to='/login' className={({ isActive,  }) =>isActive ? "text-black" : "" }><span className='mr-3'>LOG IN</span></NavLink>

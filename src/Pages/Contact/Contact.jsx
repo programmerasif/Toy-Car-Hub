@@ -7,7 +7,7 @@ const Contact = () => {
         <div className="mt-32 mb-10">
             <h5 className="text-center ">
                 <span>---------------------------------</span>
-                <h5 className="text-center text-4xl font-bold">Contact Us</h5>
+                <div className="text-center text-4xl font-bold">Contact Us</div>
                 <span>---------------------------------</span>
             </h5>
             <section className='' id="contac">

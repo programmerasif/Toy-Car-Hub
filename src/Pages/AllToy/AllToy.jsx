@@ -7,7 +7,7 @@ const AllToy = () => {
   const [searchCars, setsearchCars] = useState([])
   const shortData = cars.slice(0, 20)
   const length = cars.length
-  console.log(length);
+ 
   const [isOn,On] = useState(false)
   const [search,isSearch] = useState(false)
   useEffect(() => {
