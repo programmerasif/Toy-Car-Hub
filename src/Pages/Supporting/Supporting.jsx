@@ -16,7 +16,7 @@ const Supporting = () => {
                 <span>-------------------------</span>
             </h5>
             <Marquee>
-                <img src={img1} alt="" className="w-72 h-44 me-9"/>
+                <img src={img1} alt="" className="w-64 h-40 me-9"/>
                 <img src={img2} alt="" className="w-72 h-44 me-9"/>
                 <img src={img3} alt="" className="w-72 h-44 me-9"/>
                 <img src={img4} alt="" className="w-72 h-44 me-9"/>
