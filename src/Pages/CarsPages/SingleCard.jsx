@@ -16,7 +16,7 @@ const SingleCard = ({cars}) => {
               })
         }
     }
-    console.log(cars);
+   
     const {make,img,price,rating,_id} = cars
     return (
         
@@ -28,7 +28,7 @@ const SingleCard = ({cars}) => {
             <figure className=" h-[300px]">
                 <img src={img} alt="Shoes" className="" />
             </figure>
-            <div className="card-body justify-start items-start rounded-b-lg text-start bg-white  shadow-sm hover:bg-red-300 duration-700">
+            <div className="card-body justify-start items-start rounded-b-lg text-start bg-white  shadow-sm hover:bg-sky-200 duration-500">
               
                 <div className="card-actions flex flex-col justify-start items-start">
                 <p className="font-semibold text-start">Price :{price}</p>

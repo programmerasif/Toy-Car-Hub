@@ -3,6 +3,7 @@ import galary2 from '../../../../assets/galary/galary2.jpg'
 import galary3 from '../../../../assets/galary/galary3.jpg'
 import galary4 from '../../../../assets/galary/galary4.jpg'
 import ToyInfo from '../../../ToyInfo/ToyInfo';
+import Title from '../../Title/Title';
 import Wave from '../../Wave/Wave';
 
 
@@ -11,11 +12,7 @@ const Galary = () => {
     return (
 
         <>
-            <h5 className="text-center mb-10">
-                <span>-------------------------</span>
-                <div className="text-center text-4xl font-bold">Famous Car</div>
-                <span>-------------------------</span>
-            </h5>
+            <Title text='Showcase'/>
             <Wave />
             <div className="bg-[#EDD8BA] text-[#333333] text-xl font-semibold" >
 

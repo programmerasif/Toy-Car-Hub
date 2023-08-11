@@ -8,7 +8,6 @@ import Wave from '../Wave/Wave';
 const Navebr = () => {
   const { user, logOut } = useContext(AuthContext)
   const [tool, setTool] = useState(false);
-  // const [isTrue ,setTrue] = useState(false)
 
   const handelLogOut = () => {
     logOut()
@@ -35,16 +34,16 @@ const Navebr = () => {
   
 
   return (
-    <div className="bg-[#EDD8BA] relative ">
+    <div className="bg-[#EDD8BA] ">
       <Wave />
-      <div className="navbar bg-[#EDD8BA] text-[#333333] font-semibold text-xl opacity-90">
+      <div className="navbar text-[#333333] p-0 font-semibold text-xl opacity-90 ps-8 ">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
             </label>
             <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-5 shadow bg-gray-700 rounded-box w-52">
-              <div className='flex gap-3 items-end justify-center w-full'>
+              <div className=' flex gap-3 items-end justify-center w-full'>
                 Toy-cars Hub <img src={logo} alt="" height='30' width='30' className=' ' />
               </div>
               <li><NavLink to='/'>Home</NavLink> </li>
@@ -52,7 +51,7 @@ const Navebr = () => {
               <li><NavLink to='/myToys'>My Toys</NavLink> </li>
 
               <li><NavLink to='/addedToy'>Added Toys</NavLink> </li>
-              <li>Blogs</li>
+              
               {
                 !user?.uid ? <> <NavLink to='/login'><li><span>LOG IN</span></li></NavLink>
                   <NavLink to='/register'><li><span>REGISTER</span></li></NavLink></> : <> <NavLink ><li onClick={handelLogOut}><span>Log out</span></li></NavLink></>
@@ -61,20 +60,19 @@ const Navebr = () => {
 
             </ul>
           </div>
-          <a className=" md:text-2xl sm:text-sm ">
+          <a className="">
             <div className='flex  items-center justify-center w-full'>
-              <span>Toy-cars Hub</span> <img src={logo} alt="" height='65' width='65' className='' />
+              <span className='text-sm md:text-2xl w-40'>Toy-cars Hub</span> <img src={logo} alt="" height='65' width='65' className='' />
             </div>
           </a>
         </div>
-        <div className="navbar-end hidden px-12 lg:flex">
+        <div className="navbar-end hidden px-12  lg:flex">
           <ul className="menu-horizontal flex gap-3 items-center justify-center">
           <p className='absolute top-16 right-5 text-blue-700 border p-2'>{tool == true ? <span>{user?.displayName}</span> : ""}</p>
             <li><NavLink to='/'  className={({ isActive,  }) =>isActive ? "text-black" : "" }>Home</NavLink> </li>
             <li><NavLink to='/alltoy' className={({ isActive,  }) =>isActive ? "text-black" : "" }>All Toys</NavLink> </li>
             <li>{user && <NavLink to='/myToys' className={({ isActive,  }) =>isActive ? "text-black" : "" }>My Toys</NavLink>} </li>
             <li>{user && <NavLink to='/addedToy' className={({ isActive,  }) =>isActive ? "text-black" : "" }>Added Toys</NavLink>}</li>
-            <li><NavLink to='/blog'className={({ isActive,  }) =>isActive ? "text-black" : "" } >Blogs</NavLink></li>
             <li>
               {
                 !user ? <> <NavLink to='/login' className={({ isActive,  }) =>isActive ? "text-black" : "" }><span className='mr-3'>LOG IN</span></NavLink>

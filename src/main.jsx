@@ -12,7 +12,7 @@ import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
 import AuthProvider from './Provider/AuthProvider';
 import AllToy from './Pages/AllToy/AllToy';
-import AddedToy from './Pages/AddAToy/AddedToy';
+
 import React from 'react';
 import ViewDetils from './Pages/ViewDetils/ViewDetils';
 import MyToys from './Pages/MyToys/MyToys';
@@ -21,6 +21,7 @@ import PrivateRout from './Pages/PrivateRout/PrivateRout';
 import ViewdetilsForHom from './Pages/ViewDetils/ViewdetilsForHom';
 import ErrorPage from './Pages/ErrorPage/ErrorPage';
 import Blog from './Pages/Blog/Blog';
+import AddToys from './Pages/AddToys/AddToys';
 
 const router = createBrowserRouter([
   {
@@ -50,7 +51,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/addedToy',
-        element: <PrivateRout><AddedToy /></PrivateRout>
+        element: <PrivateRout> <AddToys /> </PrivateRout>
       },
       {
         path:'/view/:id',

@@ -2,10 +2,9 @@ import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
 import useTitlt from "../../Hook/useHook";
+import Title from "../Share/Title/Title";
 
-
-
-const AddedToy = () => {
+const AddToys = () => {
     const {user} = useContext(AuthContext)
     useTitlt('Added Toy')
     const handelAdded = (e) =>{
@@ -58,12 +57,13 @@ const AddedToy = () => {
 
     
     return (
-        <div>
-            <div className="card-body bg-[#F1F6F9] rounded w-4/5 mx-auto mt-12">
+        <div className="mt-36"> 
+        <Title text='Add New Toy'/>
+            <div className="card-body bg-[#EDD8BA] rounded w-4/5 mx-auto ">
 
               <form onSubmit={handelAdded}>
 
-              <div className="form-control">
+              <div className="form-control ">
                     <label className="label">
                         <span className="label-text text-black">Pictur URL</span>
                     </label>
@@ -131,4 +131,4 @@ const AddedToy = () => {
     );
 };
 
-export default AddedToy;
+export default AddToys;
