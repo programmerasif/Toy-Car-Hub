@@ -1,25 +1,12 @@
 import { Link } from "react-router-dom";
 import { FaCartPlus } from "react-icons/fa";
-import { useStars } from "stars-rating-react-hooks"
+
 const BestSellingCard = ({car}) => {
 
 
   const {productName,picture,price,rating} = car
 
-  const config = {
-    totalStars: 5,
-    initialSelectedValue: rating,
-    renderFull: "★",
-    renderEmpty: "☆"
-  };
 
-  const {
-    stars,
-    getStarProps,
-    getStarWrapperProps,
-    
-    
-  } = useStars(config);
     return (
         <div className=" mx-auto shadow-md rounded-lg relative overflow-hidden " data-aos="fade-up" >
             
@@ -28,28 +15,8 @@ const BestSellingCard = ({car}) => {
               <div className="flex flex-col justify-center items-center h-20 shadow-sm">
               <h2 className="text-xl font-bold pt-5">{productName}</h2>
                 <p className="justify-center items-center">Ratings : <span
-        {...getStarWrapperProps({
-          style: {
-            cursor: "pointer"
-          }
-        })}
+       
       >
-        {stars?.map((star, i) => (
-          <span
-            key={i}
-            {...getStarProps(i, {
-              style: {
-                fontSize: "40px",
-                color: "gold"
-              },
-              onClick: (event, ratedValue) => {
-                alert(`You just rated ${ratedValue} Stars!!`);
-              }
-            })}
-          >
-            {star}
-          </span>
-        ))}
       </span></p>
               </div>
             <figure className=" h-[300px]">

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
-import { useStars } from "stars-rating-react-hooks"
+
 
 const SingleCard = ({cars}) => {
     const {user} = useContext(AuthContext)
@@ -19,20 +19,7 @@ const SingleCard = ({cars}) => {
         }
     }
     const {make,img,price,rating,_id} = cars
-    const config = {
-        totalStars: 5,
-        initialSelectedValue: rating,
-        renderFull: "★",
-        renderEmpty: "☆"
-      };
     
-      const {
-        stars,
-        getStarProps,
-        getStarWrapperProps,
-        
-        
-      } = useStars(config);
     
     return (
       
@@ -41,28 +28,8 @@ const SingleCard = ({cars}) => {
               <div className="flex flex-col justify-center items-center h-20 border-b-2 border-gray-200">
               <h2 className="text-xl font-bold pt-5 ">{make}</h2>
                 <p className="flex justify-center items-center gap-2">Ratings :  <span
-        {...getStarWrapperProps({
-          style: {
-            cursor: "pointer"
-          }
-        })}
+        
       >
-        {stars?.map((star, i) => (
-          <span
-            key={i}
-            {...getStarProps(i, {
-              style: {
-                fontSize: "40px",
-                color: "gold"
-              },
-              onClick: (event, ratedValue) => {
-                alert(`You just rated ${ratedValue} Stars!!`);
-              }
-            })}
-          >
-            {star}
-          </span>
-        ))}
       </span></p>
               </div>
             <figure className=" h-[300px]">
