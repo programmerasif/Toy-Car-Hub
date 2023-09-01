@@ -14,7 +14,7 @@ const Galary = () => {
         <>
             <Title text='Showcase'/>
             <Wave />
-            <div className="bg-[#EDD8BA] text-[#333333] text-xl font-semibold" >
+            <div className="bg-[#ece3e1] text-[#333333] text-xl font-semibold" >
 
                 <div className="grid grid-cols-2 md:grid-cols-4  p-10 justify-center items-center gap-8">
                     <div data-aos="fade-up">

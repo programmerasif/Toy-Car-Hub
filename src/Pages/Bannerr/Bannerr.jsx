@@ -1,79 +1,93 @@
-import React, { useRef, useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import './styles.css';
 
-import baby1 from '../../assets/Banner/baby1.png'
-import baby2 from '../../assets/Banner/baby2.png'
-import baby3 from '../../assets/Banner/baby3.png'
+import AwesomeSlider from 'react-awesome-slider';
+import img8 from '../../assets/Banner/banner8.png'
+import img10 from '../../assets/Banner/banner10.png'
+import web from '../../assets/Banner/sun.png'
+
+
+import withAutoplay from 'react-awesome-slider/dist/autoplay';
+import 'react-awesome-slider/dist/styles.css';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 const Bannerr = () => {
-    return (
-        <>
-      <Swiper
-        spaceBetween={30}
-        centeredSlides={true}
-        autoplay={{
-          delay: 6500,
-          disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={true}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-            <div  className='styles.banner  flex flex-col md:flex-row w-full  justify-center md:justify-around items-center mt-0 md:mt-20'>
-            <div data-aos="fade-down">
-                  <h5 className=' text-[##36454F] mt-2  md:text-5xl font-semibold'>Hot & Trandy</h5>
-                  <h3 className='text-[##000000] mt-2 text-4xl md:text-7xl font-bold'>Baby Kids Toy</h3>
-                  <h6 className='text-xl mt-2 text-[#333333]'>Get Upto 15% Off On Your First Order</h6>
-                  <button className='bg-[#FFFFFF] text-[#333333] px-4  md:px-8 py-2 md:py-4 rounded-full font-semibold'>Shop now</button>
-                </div>
-                <div className=''>
-                    <img src={baby2} alt="" className='w-[800px]'/>
-                    </div>
-            </div>
-        </SwiperSlide>
 
-        <SwiperSlide>
-            <div  className='styles.banner flex flex-col-reverse md:flex-row w-full  justify-center md:justify-around items-center mt-0 md:mt-20'>
-            <div data-aos="fade-down">
-                  <h5 className=' text-[##36454F] mt-2  md:text-5xl font-semibold'>Hot & Trandy</h5>
-                  <h3 className='text-[##000000] mt-2 text-4xl md:text-7xl font-bold'>Baby Kids Toy</h3>
-                  <h6 className='text-xl mt-2 text-[#333333]'>Get Upto 15% Off On Your First Order</h6>
-                  <button className='bg-[#FFFFFF] text-[#333333] px-4  md:px-8 py-2 md:py-4 rounded-full font-semibold'>Shop now</button>
-                </div>
-                <div className=''>
-                    <img src={baby1} alt="" className='w-[800px]'/>
-                    </div>
-            </div>
-        </SwiperSlide>
-        
-        <SwiperSlide>
-            <div  className='banner3 flex flex-col-reverse md:flex-row w-full  justify-center  items-center mt-0 md:mt-20'>
-            <div className=''>
-                    <img src={baby3} alt="" className='w-[900px]'/>
-                    </div>
-            
-            <div data-aos="fade-down">
-                  <h5 className=' text-[##36454F] mt-2  md:text-5xl font-semibold'>Hot & Trandy</h5>
-                  <h3 className='text-[##000000] mt-2 text-4xl md:text-7xl font-bold'>Baby Kids Toy</h3>
-                  <h6 className='text-xl mt-2 text-[#333333]'>Get Upto 15% Off On Your First Order</h6>
-                  <button className='bg-[#FFFFFF] text-[#333333] px-4  md:px-8 py-2 md:py-4 rounded-full font-semibold'>Shop now</button>
-                </div>
-                
-            </div>
-        </SwiperSlide>
-        
-      </Swiper>
-    </>
-    );
-};
+  useEffect(() => {
+  
+    AOS.init();
+
+    AOS.refresh();
+  }, []);
+  const sliderStyle = {
+    height: '90vh',
+  };
+
+    return (
+      <>
+     <div className=' '>
+ <AutoplaySlider
+    play={true}
+    cancelOnInteraction={false}
+    interval={6000}
+    style={sliderStyle}
+  >
+    
+    
+    <div data-src="" style={{ backgroundColor: '#ece3e1'}}>
+       <div className='flex  flex-col-reverse lg:flex-row  mt-[82px] lg:mt-[114px] justify-start lg:justify-center leading-relaxe items-center lg:py-10 py-5'>
+        <div className='text-start md:w-full lg:w-[50%]'>
+          <h4 className='text-5xl md:text-8xl font-bold pb-2' data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">One Box toy</h4> 
+          <h5 className='md:text-2xl pb-5' data-aos="fade-right" data-aos-duration="800">Flat 10% Off On order Above 12$</h5>
+          <button className='px-6 py-2 lg:px-10 lg:py-4 font-semibold bg-yellow-500 rounded-md text-white lg:text-2xl' data-aos="fade-right" data-aos-duration="1200">Shop Now</button>
+          </div>
+        <div >
+          <img src={img8} alt="" className=' p-10 w-[800px]' data-aos="fade-right" data-aos-duration="1200"/>
+          <img src={web} alt="" className="absolute animate-pulse lg:top-28 lg:right-28 right-6 top-24 w-[100px] lg:w-[300px] " data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500"/>
+          
+          </div>
+      </div>
+      </div>
+
+      <div data-src="" style={{ backgroundColor: '#ece3e1'}}> <div className='flex  flex-col-reverse lg:flex-row  mt-[202px] lg:mt-[114px] justify-center leading-relaxe items-center lg:py-10 py-5'>
+        <div className='md:w-full lg:w-[50%]'>
+          <h4 className='text-5xl md:text-8xl font-bold pb-2' data-aos="fade-down" data-aos-easing="linear" data-aos-duration="800">One Box toy</h4> 
+          <h5 className='md:text-2xl pb-5' data-aos="fade-right" data-aos-duration="1100">Flat 10% Off On order Above 12$</h5>
+          <button className='px-6 py-2 md:px-10 md:py-4 font-semibold bg-yellow-500 rounded-md text-white lg:text-2xl' data-aos="fade-right" data-aos-duration="1300">Shop Now</button>
+          </div>
+        <div >
+          <img src={img10} alt="" className=' p-10 w-[800px]' data-aos="fade-right" data-aos-duration="1500"/>
+          <img src={web} alt="" className="absolute animate-pulse lg:top-28 lg:right-28 right-6 top-24 w-[100px] lg:w-[300px] " data-aos="fade-down" data-aos-easing="linear" data-aos-duration="800"/>
+          
+          </div>
+      </div>
+      </div>
+    
+  </AutoplaySlider>
+     </div>
+
+     {/* <div className='md:hidden block '>
+
+<div className='flex  flex-col-reverse md:flex-row  bg-[#ece3e1] mt-[82px] lg:mt-[114px] justify-center leading-relaxe items-center lg:py-10 py-5'>
+   <div>
+     <h4 className='text-5xl lg:text-8xl font-bold pb-2' data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">One Box toy</h4> 
+     <h5 className='lg:text-2xl pb-5' data-aos="fade-right" data-aos-duration="800">Flat 10% Off On order Above 12$</h5>
+     <button className='px-6 py-2 lg:px-10 lg:py-4 font-semibold bg-yellow-500 rounded-md text-white lg:text-2xl' data-aos="fade-right" data-aos-duration="1200">Shop Now</button>
+     </div>
+   <div >
+     <img src={img8} alt="" className=' p-10 w-[800px]' data-aos="fade-right" data-aos-duration="1200"/>
+     <img src={web} alt="" className="absolute animate-pulse lg:top-28 lg:right-28 right-6 top-24 w-[100px] lg:w-[300px] " data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500"/>
+     
+     </div>
+ </div>
+</div> */}
+    
+      </>
+
+
+
+      );
+  };
 
 export default Bannerr;

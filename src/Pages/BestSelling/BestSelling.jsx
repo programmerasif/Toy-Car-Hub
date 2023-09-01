@@ -14,10 +14,10 @@ const BestSelling = () => {
 
    
     return (
-        <div className="w-[80%] mx-auto"> 
+        <div className="lg:w-[80%] w-full mx-auto"> 
 
-            <Title text='Top Selling Toys'/>
-            <div  className="grid md:grid-cols-4 sm:grid-cols-1 gap-5 py-8  mx-auto">
+            <Title text='Best Selling Toys'/>
+            <div  className="grid md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-1 gap-5 py-8  mx-auto">
             {
                 toprated.map(car => <BestSellingCard car={car} key={car._id}/> )
             }

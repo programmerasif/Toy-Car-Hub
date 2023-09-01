@@ -1,29 +1,67 @@
 import { Link } from "react-router-dom";
-
-
+import { FaCartPlus } from "react-icons/fa";
+import { useStars } from "stars-rating-react-hooks"
 const BestSellingCard = ({car}) => {
 
 
   const {productName,picture,price,rating} = car
+
+  const config = {
+    totalStars: 5,
+    initialSelectedValue: rating,
+    renderFull: "★",
+    renderEmpty: "☆"
+  };
+
+  const {
+    stars,
+    getStarProps,
+    getStarWrapperProps,
+    
+    
+  } = useStars(config);
     return (
-        <div className=" mx-auto shadow-md rounded-lg " data-aos="fade-up" >
+        <div className=" mx-auto shadow-md rounded-lg relative overflow-hidden " data-aos="fade-up" >
             
                 
-        <div className="card w-80 bg-[#A0CeD4]   text-[#333333]" data-aos="fade-up">
+        <div className="card w-80 md:w-96 lg:w-80 bg-[#f6f8fa]   text-[#333333] " data-aos="fade-up">
               <div className="flex flex-col justify-center items-center h-20 shadow-sm">
-              <h2 className="card-title ">{productName}</h2>
-                <p>Ratings : {rating}</p>
+              <h2 className="text-xl font-bold pt-5">{productName}</h2>
+                <p className="justify-center items-center">Ratings : <span
+        {...getStarWrapperProps({
+          style: {
+            cursor: "pointer"
+          }
+        })}
+      >
+        {stars?.map((star, i) => (
+          <span
+            key={i}
+            {...getStarProps(i, {
+              style: {
+                fontSize: "40px",
+                color: "gold"
+              },
+              onClick: (event, ratedValue) => {
+                alert(`You just rated ${ratedValue} Stars!!`);
+              }
+            })}
+          >
+            {star}
+          </span>
+        ))}
+      </span></p>
               </div>
             <figure className=" h-[300px]">
                 <img src={picture} alt="Shoes" className="" />
             </figure>
-            <div className="card-body   bg-white   hover:bg-sky-100 duration-300 ">
+            <div className="py-5 hover:bg-sky-100 duration-300 ">
               
                 <div className="card-actions  flex flex-col justify-start items-center">
-                <p>Price :{price}</p>
+                <p><span className="font-semibold">Price :  </span><span className="text-yellow-500">{price}$</span></p>
                     <div className="flex justify-between items-center gap-4">
-                    <Link ><button className="px-6 py-1 bg-[#A0CeD4] rounded-full font-semibold ">Buy</button></Link>
-                    <Link ><button className="px-6 py-1 bg-[#A0CeD4] rounded-full font-semibold ">Add To Card</button></Link>
+                    <Link ><button className="px-6 py-1 bg-ske rounded-full font-semibold text-yellow-500">Buy</button></Link>
+                    <Link ><button className="px-6 py-1 bg-yellow-500 text-white rounded-full font-semibold flex justify-center items-center gap-2"><span>Add To Card</span> <FaCartPlus /></button></Link>
                     </div>
                 </div>
             </div>

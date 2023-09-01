@@ -57,72 +57,81 @@ const AddToys = () => {
 
     
     return (
-        <div className="mt-36"> 
+        <div className="mt-[5.5rem] bg-[#ece3e182]"> 
         <Title text='Add New Toy'/>
-            <div className="card-body bg-[#EDD8BA] rounded w-4/5 mx-auto ">
+            <div className="pb-12 px-5 rounded w-full lg:w-4/5 mx-auto drop-shadow-md ">
 
               <form onSubmit={handelAdded}>
 
               <div className="form-control ">
-                    <label className="label">
-                        <span className="label-text text-black">Pictur URL</span>
+                    <label className="label ">
+                        <span className="label-text text-yellow-500">Pictur URL</span>
                     </label>
-                    <input type="text" placeholder="Pictur URL" required name='picter' className="input input-bordered" />
+                   
+                    <input className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-yellow-500 focus:ring-yellow-500 focus:ring-1 w-full sm:text-sm" placeholder="Pictur URL..." type="text" required name='picter'/>
                 </div>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text text-black">Car Name</span>
+                        <span className="label-text text-yellow-500">Car Name</span>
                     </label>
-                    <input type="text" placeholder="Name" required name='name' className="input input-bordered" />
+                    <input className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-yellow-500 focus:ring-yellow-500 focus:ring-1 w-full sm:text-sm" placeholder="Name..." type="text" required name='name'/>
+                    
                 </div>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text text-black">Seller Name</span>
+                        <span className="label-text text-yellow-500">Seller Name</span>
                     </label>
-                    <input type="text" placeholder="SellerName" required name='SellerName' className="input input-bordered" />
+                    <input className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-yellow-500 focus:ring-yellow-500 focus:ring-1 w-full sm:text-sm" placeholder="Seller Name..." type="text" required name='SellerName'/>
+                    
                 </div>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text text-black">Seller Email</span>
+                        <span className="label-text text-yellow-500">Seller Email</span>
                     </label>
-                    <input type="text" placeholder="SellerEmail" value={user?.email} required name='SellerEmail' className="input input-bordered" />
+                    <input className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-yellow-500 focus:ring-yellow-500 focus:ring-1 w-full sm:text-sm" placeholder="Seller Email..." type="text" value={user?.email} required name='SellerEmail'/>
+                    
                 </div>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text text-black">Sub-category</span>
+                        <span className="label-text text-yellow-500">Sub-category</span>
                     </label>
-                    <input type="text" placeholder="Like sports, Bus,Truck etc" required name='SubCategory' className="input input-bordered" />
+                    <input className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-yellow-500 focus:ring-yellow-500 focus:ring-1 w-full sm:text-sm" placeholder="Like sports, Bus,Truck etc..." type="text" required name='SubCategory'/>
+                    
                 </div>
                <div className="grid grid-cols-3 gap-4 ">
                <div className="form-control">
                     <label className="label">
-                        <span className="label-text text-black">Price</span>
+                        <span className="label-text text-yellow-500">Price</span>
                     </label>
-                    <input type="number" placeholder="Price," required name='Price' className="input input-bordered" />
+                    <input className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-yellow-500 focus:ring-yellow-500 focus:ring-1 w-full sm:text-sm" placeholder="Price..." required name='Price' type="number"/>
+        
                 </div>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text text-black">Rating</span>
+                        <span className="label-text text-yellow-500">Rating</span>
                     </label>
-                    <input type="number" placeholder="rating" required name='rating' className="input input-bordered" />
+                    <input className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-yellow-500 focus:ring-yellow-500 focus:ring-1 w-full sm:text-sm" placeholder="Price..." required name='rating' type="number"/>
+                    
                 </div>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text text-black">Quantity</span>
+                        <span className="label-text text-yellow-500">Quantity</span>
                     </label>
-                    <input type="number" placeholder="Available quantity" required name='quantity' className="input input-bordered" />
+                    <input className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-yellow-500 focus:ring-yellow-500 focus:ring-1 w-full sm:text-sm" placeholder="Available quantity..." required name='quantity' type="number"/>
+                  
                 </div>
                 
                </div>
                <div className="form-control">
                     <label className="label">
-                        <span className="label-text text-black">Description</span>
+                        <span className="label-text text-yellow-500">Description</span>
                     </label>
-                    <input type="text" placeholder="Description" required name='description' className="input input-bordered" />
+                    <input className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-yellow-500 focus:ring-yellow-500 focus:ring-1 w-full sm:text-sm" placeholder="Description..." required name='description' type="text"/>
+                   
                 </div>
                <div className="form-control">
                    {/* <input type="button" value="Submit"  className=" "/> */}
-                   <input type="submit" className="btn bg-[#394867] text-white p-4 mt-4" />
+                   <input type="submit" className=" rounded-md text-xl font-semibold bg-yellow-500 text-white p-4 mt-4" />
                 </div>
               </form>
             </div>

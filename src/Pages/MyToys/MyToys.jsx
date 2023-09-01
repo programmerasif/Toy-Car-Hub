@@ -3,13 +3,13 @@ import { AuthContext } from "../../Provider/AuthProvider";
 
 import MyToyCards from "./MyToyCards";
 import Swal from "sweetalert2";
+import Title from "../Share/Title/Title";
 
 
 
 const MyToys = () => {
 const {user} = useContext(AuthContext)
 const [myToy,setMytoy] = useState([])
-console.log(user);
     useEffect(() =>{
         fetch(`https://server-forassiignment11.vercel.app/allCars?email=${user?.email}`)
         .then(res => res.json())
@@ -51,11 +51,34 @@ console.log(user);
         
        }
     return (
-        <div>
-            {
+        <>
+
+<div className="overflow-x-auto w-full lg:w-[80%] mx-auto mt-24 ">
+  <Title text="My added Toys"/>
+  <table className="table w-full">
+    {/* head */}
+    <thead>
+      <tr>
+      <th>Picture </th>
+      <th>Sellar Name</th>
+      <th>Toy Name</th>
+      <th>Sub-category </th>
+      <th>Price</th>
+      <th>Available Quantity</th>
+      <th>Quantity</th>
+      <th>Update button</th>
+       <th>Delete button</th>
+      </tr>
+    </thead>
+    <tbody className="w-full">
+    {
                 myToy.map(cars => <MyToyCards cars={cars} handelDelete={handelDelete} key={cars._id}/>)
-            }
-        </div>
+    }
+    </tbody>
+  </table>
+</div>
+ 
+        </>
     );
 };
 

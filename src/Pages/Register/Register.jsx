@@ -1,9 +1,11 @@
 import  { useContext, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { Link, useNavigate } from "react-router-dom";
-import { FaGoogle } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 import useTitlt from '../../Hook/useHook';
+import img from '../../assets/Login2.jpg'
 import Swal from 'sweetalert2';
+import Title from '../Share/Title/Title';
 
 const Register = () => {
     useTitlt('Register Page')
@@ -53,61 +55,58 @@ const Register = () => {
           });
     }
     return (
-        <div>
+    <div className='mt-28'>
+      <Title text='Please Register'/>
+    <div className='flex flex-col lg:flex-row mx-auto justify-center items-center rounded-lg w-full  lg:w-[80%] px-4 lg:px-0'>
             
-        <div className="hero min-h-screen bg-[#F1F6F9]">
-       
-            <div className="hero-content ">
-            
-                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                   
-                
-                    <div className="card-body px-10 rounded"> 
-                    <h3 className="text-4xl font-bold"> Please Register</h3>
-                            
-                           <form onSubmit={handelRegister}>
+            <div className='w-[50%]'>
+           <img src={img} alt="login" className="w-[1200px]"/>
 
-                           <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Name</span>
-                                </label>
-                                <input type="text" placeholder="Name" required name='name' className="input input-bordered" />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text ">Email</span>
-                                </label>
-                                <input type="text" placeholder="email" required name='email' className="input input-bordered" />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text ">Photo URL</span>
-                                </label>
-                                <input type="text" placeholder="Photo URL" required name='photoUrl' className="input input-bordered" />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text ">Password</span>
-                                </label>
-                                <input type="text" placeholder="password" required name='password' className="input input-bordered" />
-                            </div>
-                            <p className='text-red-600'>{err}</p>
-                            <div className="form-control mt-6">
-                                <input type="submit" className="btn bg-[#394867]" value='Register'/>
-                            </div>
-                            <div className="form-control mt-6" onClick={handelGoogle}>
+     </div>
+        <div className="rounded-md w-full lg:w-[50%] mb-8 py-14 px-7 bg-gray-100 "> 
+                            
+     <form onSubmit={handelRegister}>
+
+    <div className="form-control">
+         <label className="label">
+             <span className="label-text">Name</span>
+        </label>
+    <input type="text" placeholder="Name" required name='name' className="input input-bordered" />
+     </div>
+    <div className="form-control">
+        <label className="label">
+              <span className="label-text ">Email</span>
+         </label>
+        <input type="text" placeholder="email" required name='email' className="input input-bordered" />
+    </div>
+    <div className="form-control">
+          <label className="label">
+             <span className="label-text ">Photo URL</span>
+         </label>
+         <input type="text" placeholder="Photo URL" required name='photoUrl' className="input input-bordered" />
+    </div>
+    <div className="form-control">
+         <label className="label">
+             <span className="label-text ">Password</span>
+          </label>
+          <input type="text" placeholder="password" required name='password' className="input input-bordered" />
+    </div>
+    <p className='text-red-600'>{err}</p>
+    <div className="form-control mt-6">
+         <input type="submit" className="px-6 py-3 text-xl text-gray-700 rounded bg-gray-200 font-semibold w-full mt-5" value='Register'/>
+    </div>
+     <div className="form-control mt-2">
+          <Link to='/login'><p className=''>Already Have An account? <span className='link link-hover text-[#0753eb]'>LOG IN</span> </p></Link>
+             </div>
+     </form>
+    <div className="form-control mt-3" onClick={handelGoogle}>
                                 
-                                    <button className="btn bg-[#394867] "><span className="mr-3">Google</span> <FaGoogle /> </button>
-                                </div>
-                           </form>
-                            <div className="form-control mt-6">
-                                <Link to='/login'><p className=''>Already Have An account? <span className='link link-hover text-[#0753eb]'>LOG IN</span> </p></Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+       <button className="px-6 py-3 text-xl text-gray-700 rounded bg-gray-200 font-semibold w-full mt-5 flex justify-center items-center gap-2"><span className="text-3xl"><FcGoogle /></span> <span>Google</span></button>
+         </div>
+                            
+     </div>
+ </div>
+    </div>
     );
 };
 

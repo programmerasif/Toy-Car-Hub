@@ -6,10 +6,10 @@ const Footer = () => {
   return (
     <div className='relative'>
      
-      <footer className="footer p-10 bg-[#A0CeD4]  mx-auto py-14">
+      <footer className="footer p-10 bg-[#ece3e1]  mx-auto py-14 ">
 
        <div>
-       <div className='grid md:grid-cols-4 sm:grid-cols-1 gap-8 justify-center items-center mx-auto md:p-8 ms:p-0 '>
+       <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-center items-center mx-auto md:p-8 ms:p-0 lg:mb-32 mb-3'>
        <div>
        <div className='flex  items-center justify-start w-full'>
               <span>Toy-cars Hub</span> <img src={logo} alt="" height='65' width='65' className='' />
@@ -36,11 +36,11 @@ const Footer = () => {
         </div>
 
        </div>
-      <div className='border-t mx-auto border-gray-400 mt-8 pt-8 sm:w-full md:w-11/12'>
+      {/* <div className='border-t mx-auto border-gray-400 mb-32 mt-8 pt-8 sm:w-full md:w-11/12'>
       <div className='flex justify-center items-center'>
       <p className='text-start'>Copyright ©2023 All rights reserved | This website is developed by Asif</p>
       </div>
-      </div>
+      </div> */}
        
        </div>
       </footer>

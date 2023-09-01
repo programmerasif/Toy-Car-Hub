@@ -1,6 +1,7 @@
 
 import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import Title from '../Share/Title/Title';
 
 const UpdatedMyToy = () => {
     const data = useLoaderData();
@@ -45,38 +46,44 @@ const UpdatedMyToy = () => {
 
     }
     return (
-        <div className=' w-3/4 mx-auto flex items-center justify-center h-[80vh] bg-[#F1F6F9] mt-4'>
+        <div className='mt-[5.5rem] bg-[#ece3e182]'>
+        <Title  text="Update Toy Detils"/>
+        <div className='flex items-start justify-center lg:p-20 w-full lg:w-[80%] mx-auto '>
+            
            
-            <div className='px-14 py-24 border border-gray-400'>
+            <div className='px-3 w-full'>
             <form onSubmit={handelUpdate}>
 
-<div className="grid grid-cols-3 gap-4">
-    <div className="form-control">
+<div className="grid grid-cols-1 gap-4 w-full drop-shadow-md">
+    <div className="w-full">
         <label className="label">
-            <span className="label-text text-black">Price</span>
+            <span className="label-text text-yellow-500">Price</span>
         </label>
-        <input type="number" placeholder="Price" defaultValue={price} required name='price' className="input input-bordered" />
+        <input className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-yellow-500 focus:ring-yellow-500 focus:ring-1 w-full sm:text-sm" placeholder="Price..." type='number' defaultValue={price} required name='price'/>
+       
     </div>
 
-    <div className="form-control">
+    <div className="w-full">
         <label className="label">
-            <span className="label-text text-black">Quantity</span>
+            <span className="label-text text-yellow-500">Quantity</span>
         </label>
-        <input type="number" defaultValue={availableQuantity} placeholder="Available quantity" required name='quantity' className="input input-bordered" />
+        <input className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-yellow-500 focus:ring-yellow-500 focus:ring-1 w-full sm:text-sm" placeholder="Available quantity..." type='number'defaultValue={availableQuantity} required name='quantity'/>
     </div>
-    <div className="form-control">
+    <div className="w-full">
         <label className="label">
-            <span className="label-text text-black">Description</span>
+            <span className="label-text text-yellow-500">Description</span>
         </label>
-        <input type="text" placeholder="Available quantity" defaultValue={description} required name='descripton' className="input input-bordered" />
+        <input className="placeholder:italic placeholder:text-slate-400 block bg-white border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-yellow-500 focus:ring-yellow-500 focus:ring-1 w-full sm:text-sm" placeholder="Description..." type='number' defaultValue={description} required name='descripton'/>
+        
     </div>
 
 </div>
-<div className="form-control mt-6">
-    <input type="submit" value='Update' className="btn bg-[#394867]" />
+<div className=" mt-6">
+    <input type="submit" value='Update' className="w-full rounded-md text-xl font-semibold bg-yellow-500 text-white p-4 mt-4" />
 </div>
 </form>
             </div>
+        </div>
         </div>
     );
 };

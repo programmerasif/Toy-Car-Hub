@@ -48,83 +48,87 @@ const HappyCoustomer = () => {
         modules={[Pagination]}
         className="mySwiper"
       >
+     
         <SwiperSlide>
-        <div className="card card-compact rounded-lg   bg-white shadow-xl mb-10 hover:translate-x-6 duration-300 ">
-                   <div className='bg-[#A0CeD4] '>
-                     <figure><img src={img1} alt="Person" className='h-64'/></figure>
+        <div className="text-center mb-10 hover:translate-x-6 duration-300 ">
+                   <div className='bg-white flex justify-center items-center'>
+                     <img src={img1} alt="Person" className='h-64 rounded-full bg-red-400 ' data-aos="zoom-in"/>
                    </div>
-                    <div className="card-body">
-                        <h2 className="card-title">Anderson</h2>
+                    <div className=" ">
+                        <h2 className="text-xl font-semibold">Anderson</h2>
+                        <p>AToy-Car_Hub goes beyond selling toys; it delivers a passion-infused experience. The dedication to offering diverse options and making each visitor feel valued makes it a standout in the industry.</p>
+                    </div>
+                </div>
+        </SwiperSlide>
+        <SwiperSlide>
+        <div className="text-center hover:translate-x-6 duration-300 ">
+        <div className='flex justify-center items-center'>
+                    <img src={img2} alt="Person" className='h-64 rounded-full bg-[#C1E1C1]' data-aos="zoom-in"/>
+                   </div>
+                    <div className="">
+                        <h2 className="text-xl font-semibold">Alexander Ramirez</h2>
+                        <p>Discover a toy car enthusiast's paradise at AToy-Car_Hub. From classic to contemporary, the range is astounding. The passion of the team adds that extra mile in ensuring satisfaction.</p>
+                    </div>
+                </div>
+        </SwiperSlide>
+        <SwiperSlide>
+        <div className="text-center hover:translate-x-6 duration-300 ">
+        <div className='flex justify-center items-center'>
+                     <img src={img3} alt="Person" className='h-64 rounded-full bg-[#eab308]' data-aos="zoom-in"/>
+                   </div>
+                    <div className="">
+                        <h2 className="text-xl font-semibold">William Morgan</h2>
                         <p>Toy-Car Hub offers an incredible variety of high-quality toy cars. The knowledgeable staff and inviting atmosphere make it a must-visit for any toy car enthusiast. Highly recommended!</p>
                     </div>
                 </div>
         </SwiperSlide>
         <SwiperSlide>
-        <div className="card rounded-lg  card-compact hover:translate-x-6 duration-300 bg-white shadow-xl">
-        <div className='bg-[#A0CeD4]'>
-                     <figure><img src={img2} alt="Person" className='h-64'/></figure>
+        <div className="text-center hover:translate-x-6 duration-300 bg-white ">
+        <div className='bg-white '>
+                   <div className='flex justify-center items-center'>
+                    <img src={img4} alt="Person" className='h-64 bg-[#AEC6CF] rounded-full' data-aos="zoom-in"/>
                    </div>
-                    <div className="card-body">
-                        <h2 className="card-title">Anderson</h2>
-                        <p>Toy-Car Hub offers an incredible variety of high-quality toy cars. The knowledgeable staff and inviting atmosphere make it a must-visit for any toy car enthusiast. Highly recommended!</p>
+                   </div>
+                    <div className="">
+                        <h2 className="text-xl font-semibold">James Mitchell</h2>
+                        <p>At AToy-Car_Hub, every toy car lover's dream comes true. The extensive collection spans different models and eras, backed by staff who share the same passion. An absolute gem!</p>
                     </div>
                 </div>
         </SwiperSlide>
         <SwiperSlide>
-        <div className="card rounded-lg  card-compact hover:translate-x-6 duration-300 bg-white shadow-xl">
-        <div className='bg-[#A0CeD4]'>
-                     <figure><img src={img3} alt="Person" className='h-64'/></figure>
+        <div className="text-center hover:translate-x-6 duration-300 ">
+        <div className='flex justify-center items-center'>
+                     <img src={img5} alt="Person" className='h-64 rounded-full bg-red-400' data-aos="zoom-in"/>
                    </div>
-                    <div className="card-body">
-                        <h2 className="card-title">Anderson</h2>
-                        <p>Toy-Car Hub offers an incredible variety of high-quality toy cars. The knowledgeable staff and inviting atmosphere make it a must-visit for any toy car enthusiast. Highly recommended!</p>
+                    <div className="">
+                        <h2 className="text-xl font-semibold">Samuel Bennett</h2>
+                        <p>Step into a world of miniature marvels at AToy-Car_Hub. The diverse range of meticulously crafted toy cars, along with the friendly experts eager to assist, ensures an enriching experience.</p>
                     </div>
                 </div>
         </SwiperSlide>
         <SwiperSlide>
-        <div className="card card-compact rounded-lg  hover:translate-x-6 duration-300 bg-white shadow-xl">
-        <div className='bg-[#A0CeD4]'>
-                     <figure><img src={img4} alt="Person" className='h-64'/></figure>
+        <div className="text-center hover:translate-x-6 duration-300 bg-white">
+        <div className='flex justify-center items-center'>
+                    <img src={img6} alt="Person" className='h-64 rounded-full bg-[#C1E1C1]' data-aos="zoom-in"/>
                    </div>
-                    <div className="card-body">
-                        <h2 className="card-title">Anderson</h2>
-                        <p>Toy-Car Hub offers an incredible variety of high-quality toy cars. The knowledgeable staff and inviting atmosphere make it a must-visit for any toy car enthusiast. Highly recommended!</p>
+                    <div className="">
+                        <h2 className="text-xl font-semibold">Ethan Foster</h2>
+                        <p>Looking for the perfect toy car? Your search ends at AToy-Car_Hub. With an impressive inventory and staff well-versed in the intricacies, it's a haven for enthusiasts young and old</p>
                     </div>
                 </div>
         </SwiperSlide>
         <SwiperSlide>
-        <div className="card card-compact rounded-lg  hover:translate-x-6 duration-300 bg-white shadow-xl">
-        <div className='bg-[#A0CeD4]'>
-                     <figure><img src={img5} alt="Person" className='h-64'/></figure>
+        <div className="text-center rounded-lg hover:translate-x-6 duration-300 ">
+        <div className='bg-white flex justify-center items-center'>
+        <img src={img7} alt="Person" className='h-64 rounded-full bg-[#eab308]' data-aos="zoom-in"/>
                    </div>
-                    <div className="card-body">
-                        <h2 className="card-title">Anderson</h2>
-                        <p>Toy-Car Hub offers an incredible variety of high-quality toy cars. The knowledgeable staff and inviting atmosphere make it a must-visit for any toy car enthusiast. Highly recommended!</p>
+                    <div className="">
+                        <h2 className="text-xl font-semibold">Daniel Reynolds`</h2>
+                        <p>Toy-Car_Hub isn't just a store – it's an immersion into toy car culture. The carefully curated selection, combined with a staff that treats customers like family, creates an unparalleled destination.</p>
                     </div>
                 </div>
         </SwiperSlide>
-        <SwiperSlide>
-        <div className="card card-compact rounded-lg  hover:translate-x-6 duration-300 bg-white shadow-xl">
-        <div className='bg-[#A0CeD4]'>
-                     <figure><img src={img6} alt="Person" className='h-64'/></figure>
-                   </div>
-                    <div className="card-body">
-                        <h2 className="card-title">Anderson</h2>
-                        <p>Toy-Car Hub offers an incredible variety of high-quality toy cars. The knowledgeable staff and inviting atmosphere make it a must-visit for any toy car enthusiast. Highly recommended!</p>
-                    </div>
-                </div>
-        </SwiperSlide>
-        <SwiperSlide>
-        <div className="card card-compact rounded-lg  hover:translate-x-6 duration-300 bg-white shadow-xl">
-        <div className='bg-[#A0CeD4]'>
-                     <figure><img src={img7} alt="Person" className='h-64'/></figure>
-                   </div>
-                    <div className="card-body">
-                        <h2 className="card-title">Anderson</h2>
-                        <p>Toy-Car Hub offers an incredible variety of high-quality toy cars. The knowledgeable staff and inviting atmosphere make it a must-visit for any toy car enthusiast. Highly recommended!</p>
-                    </div>
-                </div>
-        </SwiperSlide>
+       
       
       </Swiper>
             </>

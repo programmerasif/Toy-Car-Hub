@@ -12,7 +12,7 @@ import Title from "../Share/Title/Title";
 
 const Supporting = () => {
     return (
-        <div className="mb-32 bg-[#A0CeD4] pt-2">
+        <div className="mb-32 bg-[#ece3e1] pt-2">
             <Title  size={96} text='Our Sponser'/>
             <Marquee>
                 <img src={img1} alt="" className="w-52 max-h-[50px] md:w-64 md:max-h-[90px] me-9"/>
