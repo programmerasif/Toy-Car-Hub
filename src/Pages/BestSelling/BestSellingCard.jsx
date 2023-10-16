@@ -11,7 +11,7 @@ const BestSellingCard = ({car}) => {
         <div className=" mx-auto shadow-md rounded-lg relative overflow-hidden " data-aos="fade-up" >
             
                 
-        <div className="card w-80 md:w-96 lg:w-80 bg-[#f6f8fa]   text-[#333333] " data-aos="fade-up">
+        <div className="card w-80  bg-[#f6f8fa]   text-[#333333] " data-aos="fade-up">
               <div className="flex flex-col justify-center items-center h-20 shadow-sm">
               <h2 className="text-xl font-bold pt-5">{productName}</h2>
                 <p className="justify-center items-center">Ratings : <span

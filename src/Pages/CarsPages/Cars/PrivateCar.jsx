@@ -10,7 +10,7 @@ const PrivateCar = () => {
     },[])
     return (
         <div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-1 gap-5 py-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:grid-cols-1 gap-5 py-8">
             {
                 cars.map(car => <SingleCard cars={car} key={car._id}/>)
             }

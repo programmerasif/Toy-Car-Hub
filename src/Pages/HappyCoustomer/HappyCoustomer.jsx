@@ -18,7 +18,7 @@ import Title from '../Share/Title/Title';
 
 const HappyCoustomer = () => {
     return (
-        <div className="w-full mx-auto md:w-[80%] mb-20">
+        <div className="w-full mx-auto xl:w-[80%] mb-20">
         <Title text='Happy Coustomer'/>
             <>
             <Swiper

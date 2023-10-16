@@ -63,14 +63,14 @@ const Login = () => {
     return (
         <div className="mt-28">
         <Title text='Log-in Please'/>
- <div className=" flex flex-col lg:flex-row  justify-center items-end rounded-lg w-full  lg:w-[80%] px-4 lg:px-0">
+ <div className=" flex flex-col lg:flex-row  mx-auto justify-center items-end rounded-lg w-full  xl:w-[80%] px-16 xl:px-0">
 
-        <div >
+        <div className="xl:w-[50%]">
            <img src={img} alt="login" className="w-full"/>
 
      </div>
 
-     <div className="rounded-md w-full lg:w-[50%] py-14 px-5 mb-6 bg-gray-100 " >
+     <div className="rounded-md w-full xl:w-[50%] py-14 lg:px-5 mb-6 bg-gray-100 " >
                             
           <form onSubmit={handelLogin} className=" ">
 

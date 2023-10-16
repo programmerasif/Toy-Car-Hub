@@ -33,7 +33,7 @@ const ToyInfo = () => {
             >
                 <SwiperSlide>
                     <div className='grid md:grid-cols-2 sm:grid-cols-1 bg-[#ece3e1] w-full'>
-                        <div className='text-[#333333] flex justify-center items-center mt-16 p-3'>
+                        <div className='text-[#333333] flex justify-center items-center  p-3'>
                             <div>
                                 <h5 className='text-3xl font-semibold'>Lamborghini, luxury sports car</h5>
                                 <h4 className='border-2 rounded-md border-white p-5 mt-2 shadow-xl'>Product type : Sports Car</h4>

@@ -24,10 +24,12 @@ const SingleCard = ({cars}) => {
     return (
       
       
-        <div className="card md:w-96 lg:w-80 sm:w-80 bg-[#f6f8fa] border-2 border-gray-50 rounded-lg hover:shadow-md translate-x-6" data-aos="fade-up">
+        <div className="card md:w-80 xl:w-96 w-[20rem] bg-[#f6f8fa] border-2 border-gray-50 rounded-lg hover:shadow-md translate-x-6" data-aos="fade-up">
               <div className="flex flex-col justify-center items-center h-20 border-b-2 border-gray-200">
               <h2 className="text-xl font-bold pt-5 ">{make}</h2>
-                <p className="flex justify-center items-center gap-2">Ratings :  <span
+                <p className="flex justify-center items-center gap-2">Ratings : 
+                
+                  <span
         
       >
       </span></p>
