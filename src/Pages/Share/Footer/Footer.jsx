@@ -36,12 +36,6 @@ const Footer = () => {
         </div>
 
        </div>
-      {/* <div className='border-t mx-auto border-gray-400 mb-32 mt-8 pt-8 sm:w-full md:w-11/12'>
-      <div className='flex justify-center items-center'>
-      <p className='text-start'>Copyright ©2023 All rights reserved | This website is developed by Asif</p>
-      </div>
-      </div> */}
-       
        </div>
       </footer>
       <div className='z-10 absolute bottom-0'>

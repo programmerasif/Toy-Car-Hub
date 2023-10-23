@@ -22,6 +22,8 @@ import ViewdetilsForHom from './Pages/ViewDetils/ViewdetilsForHom';
 import ErrorPage from './Pages/ErrorPage/ErrorPage';
 import Blog from './Pages/Blog/Blog';
 import AddToys from './Pages/AddToys/AddToys';
+import ShopAll from './Pages/ShopAll/ShopAll';
+import Payment from './Pages/Payment/Payment';
 
 const router = createBrowserRouter([
   {
@@ -48,6 +50,15 @@ const router = createBrowserRouter([
       {
         path: '/alltoy',
         element:<AllToy />
+      },
+      {
+        path: '/payment',
+        element:<Payment/>
+      }
+      ,
+      {
+        path: '/shopAll',
+        element:<ShopAll/>
       },
       {
         path: '/addedToy',

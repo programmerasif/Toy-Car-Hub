@@ -1,11 +1,21 @@
 import { Link } from "react-router-dom";
 import { FaCartPlus } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 const BestSellingCard = ({car}) => {
 
 
   const {productName,picture,price,rating} = car
 
+  const addToCard = () => {
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Product has been Added',
+        showConfirmButton: false,
+        timer: 1500
+      })
+  }
 
     return (
         <div className=" mx-auto shadow-md rounded-lg relative overflow-hidden " data-aos="fade-up" >
@@ -27,8 +37,8 @@ const BestSellingCard = ({car}) => {
                 <div className="card-actions  flex flex-col justify-start items-center">
                 <p><span className="font-semibold">Price :  </span><span className="text-yellow-500">{price}$</span></p>
                     <div className="flex justify-between items-center gap-4">
-                    <Link ><button className="px-6 py-1 bg-ske rounded-full font-semibold text-yellow-500">Buy</button></Link>
-                    <Link ><button className="px-6 py-1 bg-yellow-500 text-white rounded-full font-semibold flex justify-center items-center gap-2"><span>Add To Card</span> <FaCartPlus /></button></Link>
+                    <Link to='/payment'><button className="px-6 py-1 bg-ske rounded-full font-semibold text-yellow-500">Buy</button></Link>
+                    <Link ><button className="px-6 py-1 bg-yellow-500 text-white rounded-full font-semibold flex justify-center items-center gap-2" onClick={addToCard}><span>Add To Card</span> <FaCartPlus /></button></Link>
                     </div>
                 </div>
             </div>

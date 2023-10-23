@@ -3,9 +3,11 @@ import About from '../../../About/About';
 import Bannerr from '../../../Bannerr/Bannerr';
 import BestSelling from '../../../BestSelling/BestSelling';
 import Escalutin from '../../../Escalutin/Escalutin';
+import Exclusive from '../../../Exclusive/Exclusive';
 import HappyCoustomer from '../../../HappyCoustomer/HappyCoustomer';
 import SellsAndReviews from '../../../SellsAndReviews/SellsAndReviews';
 import ShopCatagory from '../../../ShapCatagory/ShopCatagory';
+import Support from '../../../Support/Support';
 import Supporting from '../../../Supporting/Supporting';
 
 import Galary from '../Galary/Galary';
@@ -31,11 +33,11 @@ const Home = () => {
     <div className='mt-28 mb-28'>
       <BestSelling />
     </div>
-    
+    <Exclusive />
     <SellsAndReviews />
     <Supporting />
     <HappyCoustomer />
-    {/* <Contact /> */}
+    <Support />
     </>
   );
 };

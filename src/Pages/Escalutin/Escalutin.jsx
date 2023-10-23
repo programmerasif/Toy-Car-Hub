@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import yellowCar from "../../assets/yellowCar.jpg";
 import './style.css'
 
@@ -24,9 +25,12 @@ const Escalutin = () => {
               engine, and sharp handling, making it a thrilling choice for driving
               enthusiasts who enjoy speed and precision
             </p>
+            <Link to='/shopAll'>
             <button className="btn rounded-lg bg-yellow-500 btn-outline border-0 border-b-4">
               Order Now
             </button>
+            </Link>
+            
           </div>
         </div>
       </div>

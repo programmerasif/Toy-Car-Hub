@@ -10,7 +10,18 @@ import pic2 from '../../assets/removeBg2.png'
 import pic3 from '../../assets/removeBg3.png'
 import pic4 from '../../assets/removeBg4.png'
 import './Info.css';
+import Swal from 'sweetalert2';
 const ToyInfo = () => {
+
+    const addToCard = () => {
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Product has been Added',
+            showConfirmButton: false,
+            timer: 1500
+          })
+      }
 
     return (
         <div className=' bg-[#ece3e1] relative bg-img'>
@@ -40,7 +51,7 @@ const ToyInfo = () => {
                                 <h4 className='border-2 rounded-md border-white p-5 mt-2 shadow-xl'>Product Weight : 1.1kg</h4>
                                 <h4 className='border-2 rounded-md border-white p-5 mt-2 shadow-xl'>Product Color : Red</h4>
                                 <h5 className='font-semibold mt-2'>Price :<span className='text-4xl font-bold text-yellow-500 '>15$</span></h5>
-                                <button className='bg-[#FFFFFF] text-[#333333] px-8 py-4 rounded-full font-semibold mt-5'>ADD TO CARD</button>
+                                <button className='bg-[#FFFFFF] text-[#333333] px-8 py-4 rounded-full font-semibold mt-5' onClick={addToCard}>ADD TO CARD</button>
                             </div>
                         </div>
                         <div >
@@ -64,7 +75,7 @@ const ToyInfo = () => {
                                 <h4 className='border-2 rounded-md border-white p-5 mt-2 shadow-xl'>Product Weight : 1.1kg</h4>
                                 <h4 className='border-2 rounded-md border-white p-5 mt-2 shadow-xl'>Product Color : Red</h4>
                                 <h5 className='font-semibold mt-2'>Price :<span className='text-4xl font-bold text-yellow-500'>15$</span></h5>
-                                <button className='bg-[#FFFFFF] text-[#333333] px-8 py-4 rounded-full font-semibold mt-5'>ADD TO CARD</button>
+                                <button className='bg-[#FFFFFF] text-[#333333] px-8 py-4 rounded-full font-semibold mt-5' onClick={addToCard}>ADD TO CARD</button>
                             </div>
                         </div>
                     </div>
@@ -78,7 +89,7 @@ const ToyInfo = () => {
                                 <h4 className='border-2 rounded-md border-white p-5 mt-2 shadow-xl'>Product Weight : 1.1kg</h4>
                                 <h4 className='border-2 rounded-md border-white p-5 mt-2 shadow-xl'>Product Color : Red</h4>
                                 <h5 className='font-semibold mt-2'>Price :<span className='text-4xl font-bold text-yellow-500'>15$</span></h5>
-                                <button className='bg-[#FFFFFF] text-[#333333] px-8 py-4 rounded-full font-semibold mt-5'>ADD TO CARD</button>
+                                <button className='bg-[#FFFFFF] text-[#333333] px-8 py-4 rounded-full font-semibold mt-5' onClick={addToCard}>ADD TO CARD</button>
                             </div>
                         </div>
                         <div >
@@ -106,7 +117,7 @@ const ToyInfo = () => {
                                 <h4 className='border-2 rounded-md border-white p-5 mt-2 shadow-xl'>Product Weight : 1.1kg</h4>
                                 <h4 className='border-2 rounded-md border-white p-5 mt-2 shadow-xl'>Product Color : Red</h4>
                                 <h5 className='font-semibold mt-2'>Price :<span className='text-4xl font-bold text-yellow-500'>15$</span></h5>
-                                <button className='bg-[#FFFFFF] text-[#333333] px-8 py-4 rounded-full font-semibold mt-5'>ADD TO CARD</button>
+                                <button className='bg-[#FFFFFF] text-[#333333] px-8 py-4 rounded-full font-semibold mt-5' onClick={addToCard}>ADD TO CARD</button>
                             </div>
                         </div>
                     </div>
